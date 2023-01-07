@@ -9,6 +9,5 @@ export default {
     { exact: true, path: '/login', component: 'login' },
     { exact: true, path: '/posts/:postId', component: 'posts/post' },
   ],
-  plugins: [require.resolve('@umijs/plugins/dist/tailwindcss')],
-  tailwindcss: {}
+
 };
