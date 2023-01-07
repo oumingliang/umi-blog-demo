@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@prisma/client': ^3.10.0
@@ -7,7 +7,6 @@ specifiers:
   '@types/react': ^17.0.0
   '@types/react-dom': ^17.0.0
   '@umijs/plugins': 4.0.0-canary.20220316.1
-  '@upstash/redis': ^1.0.2
   bcryptjs: ^2.4.3
   jsonwebtoken: ^8.5.1
   prisma: ^3.10.0
@@ -18,7 +17,6 @@ specifiers:
 dependencies:
   '@prisma/client': 3.11.0_prisma@3.11.0
   '@umijs/plugins': 4.0.0-canary.20220316.1
-  '@upstash/redis': 1.0.2
   bcryptjs: 2.4.3
   jsonwebtoken: 8.5.1
   tailwindcss: 3.0.23
@@ -304,6 +302,8 @@ packages:
     resolution: {integrity: sha512-bm3AQf45vR4gKggRfvJdYJ0gFLoCbsPxiFLSH6hTVYABptNHY6l9NrhnucVjQ/X+SPtLANT9lc0fFhikj+VBRA==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.17.0
     dev: false
 
   /@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.17.7:
@@ -1093,7 +1093,6 @@ packages:
   /@prisma/engines/3.11.0-48.b371888aaf8f51357c7457d836b86d12da91658b:
     resolution: {integrity: sha512-m9iZd5F5vP6A2IvKWfHpOO/qK8OOO9nbsV/pdyEkF/1WNe0E8SIWFBKb+HcMLkG9OFbDDBy8QItXmp/mIULuwQ==}
     requiresBuild: true
-    dev: true
 
   /@qixian.cs/path-to-regexp/6.1.0:
     resolution: {integrity: sha512-2jIiLiVZB1jnY7IIRQKtoV8Gnr7XIhk4mC88ONGunZE3hYt5IHUG4BE/6+JiTBjjEWQLBeWnZB8hGpppkufiVw==}
@@ -1461,6 +1460,8 @@ packages:
       postcss: 8.4.11
       postcss-flexbugs-fixes: 5.0.2_postcss@8.4.11
       postcss-preset-env: 7.4.2_postcss@8.4.11
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@umijs/bundler-utils/4.0.0-canary.20220316.1:
@@ -1530,6 +1531,8 @@ packages:
       '@umijs/bundler-utils': 4.0.0-canary.20220316.1
       '@umijs/utils': 4.0.0-canary.20220316.1
       enhanced-resolve: 5.9.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /@umijs/plugins/4.0.0-canary.20220316.1:
@@ -1575,7 +1578,7 @@ packages:
       '@umijs/bundler-vite': 4.0.0-canary.20220316.1
       '@umijs/bundler-webpack': 4.0.0-canary.20220316.1
       '@umijs/core': 4.0.0-canary.20220316.1
-      '@umijs/renderer-react': 4.0.0-canary.20220316.1_react-dom@17.0.2+react@17.0.2
+      '@umijs/renderer-react': 4.0.0-canary.20220316.1_sfoxds7t5ydpegc3knd667wn6m
       '@umijs/server': 4.0.0-canary.20220316.1
       '@umijs/utils': 4.0.0-canary.20220316.1
       core-js: 3.21.1
@@ -1586,7 +1589,7 @@ packages:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       react-router: 6.2.2_react@17.0.2
-      react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
+      react-router-dom: 6.2.2_sfoxds7t5ydpegc3knd667wn6m
       regenerator-runtime: 0.13.9
     transitivePeerDependencies:
       - '@types/webpack'
@@ -1612,7 +1615,7 @@ packages:
       react-router-dom: 6.2.2
     dev: false
 
-  /@umijs/renderer-react/4.0.0-canary.20220316.1_react-dom@17.0.2+react@17.0.2:
+  /@umijs/renderer-react/4.0.0-canary.20220316.1_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-84Niyn+BDN6+O+UWTEeYIMudaGeQdpRUqOaYHlY9a1qDDkIcLf2pd4xrcwfGj+6PXqT4E/AkcXLxyuO7M005sw==}
     peerDependencies:
       react: '>=16.8'
@@ -1622,7 +1625,7 @@ packages:
       history: 5.3.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
+      react-router-dom: 6.2.2_sfoxds7t5ydpegc3knd667wn6m
     dev: false
 
   /@umijs/route-utils/2.0.5:
@@ -1640,7 +1643,7 @@ packages:
       history: 5.3.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      react-router-dom: 6.2.2_react-dom@17.0.2+react@17.0.2
+      react-router-dom: 6.2.2_sfoxds7t5ydpegc3knd667wn6m
     dev: false
 
   /@umijs/ssr-darkreader/4.9.45:
@@ -1670,15 +1673,6 @@ packages:
     resolution: {integrity: sha512-NdSi4B9l21IaJVVRaCfztmj2MDvIrjLIxiaNF2aH5x8rzGOoUPtjuVJYd2ituOZpILNezt3m5W9mv4uFQt46uA==}
     dependencies:
       chokidar: 3.5.3
-    dev: false
-
-  /@upstash/redis/1.0.2:
-    resolution: {integrity: sha512-1faUTdPgj5TgOImjmDRyg/+oKVkSNFD21edT/mriJCpd+IIkFFmC2sHzZhBg6xBLgoxjbN8ef16tndQxdaNkBg==}
-    engines: {node: '>=10'}
-    dependencies:
-      isomorphic-fetch: 3.0.0
-    transitivePeerDependencies:
-      - encoding
     dev: false
 
   /@vitejs/plugin-react/1.2.0:
@@ -1766,6 +1760,8 @@ packages:
     dependencies:
       micromatch: 3.1.10
       normalize-path: 2.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /anymatch/3.1.2:
@@ -2033,6 +2029,8 @@ packages:
       snapdragon-node: 2.1.1
       split-string: 3.1.0
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /braces/3.0.2:
@@ -2547,12 +2545,22 @@ packages:
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.0.0
     dev: false
 
   /debug/3.2.7:
     resolution: {integrity: sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
     dependencies:
       ms: 2.1.3
     dev: false
@@ -3114,6 +3122,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /ext/1.6.0:
@@ -3149,6 +3159,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /fast-deep-equal/3.1.3:
@@ -3699,15 +3711,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /isomorphic-fetch/3.0.0:
-    resolution: {integrity: sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==}
-    dependencies:
-      node-fetch: 2.6.7
-      whatwg-fetch: 3.6.2
-    transitivePeerDependencies:
-      - encoding
-    dev: false
-
   /isomorphic-unfetch/3.1.0:
     resolution: {integrity: sha512-geDJjpoZ8N0kWexiwkX8F9NkTsXhetLPVbZFQ+JTW239QNOwvB0gniuR1Wc6f0AMTn7/mFGyXvHTifrCp/GH8Q==}
     dependencies:
@@ -3754,6 +3757,8 @@ packages:
       walker: 1.0.8
     optionalDependencies:
       fsevents: 2.3.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /jest-regex-util/26.0.0:
@@ -3929,6 +3934,8 @@ packages:
       mime: 1.6.0
       needle: 2.9.1
       source-map: 0.6.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /lilconfig/2.0.4:
@@ -4102,6 +4109,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /micromatch/4.0.4:
@@ -4197,6 +4206,8 @@ packages:
       regex-not: 1.0.2
       snapdragon: 0.8.2
       to-regex: 3.0.2
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /native-request/1.1.0:
@@ -4214,6 +4225,8 @@ packages:
       debug: 3.2.7
       iconv-lite: 0.4.24
       sax: 1.2.4
+    transitivePeerDependencies:
+      - supports-color
     dev: false
     optional: true
 
@@ -5193,7 +5206,6 @@ packages:
     requiresBuild: true
     dependencies:
       '@prisma/engines': 3.11.0-48.b371888aaf8f51357c7457d836b86d12da91658b
-    dev: true
 
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
@@ -5391,7 +5403,7 @@ packages:
       react-router: 6.2.2
     dev: false
 
-  /react-router-dom/6.2.2_react-dom@17.0.2+react@17.0.2:
+  /react-router-dom/6.2.2_sfoxds7t5ydpegc3knd667wn6m:
     resolution: {integrity: sha512-AtYEsAST7bDD4dLSQHDnk/qxWLJdad5t1HFa1qJyUrCeGgEuCSw0VB/27ARbF9Fi/W5598ujvJOm3ujUCVzuYQ==}
     peerDependencies:
       react: '>=16.8'
@@ -5592,6 +5604,8 @@ packages:
       micromatch: 3.1.10
       minimist: 1.2.5
       walker: 1.0.8
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /sax/1.2.4:
@@ -5716,6 +5730,8 @@ packages:
       source-map: 0.5.7
       source-map-resolve: 0.5.3
       use: 3.1.1
+    transitivePeerDependencies:
+      - supports-color
     dev: false
 
   /source-map-js/1.0.2:
@@ -6133,10 +6149,6 @@ packages:
 
   /webidl-conversions/3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
-    dev: false
-
-  /whatwg-fetch/3.6.2:
-    resolution: {integrity: sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==}
     dev: false
 
   /whatwg-url/5.0.0:
